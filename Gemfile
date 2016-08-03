@@ -55,3 +55,5 @@ gem 'bcrypt'
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'react-rails'

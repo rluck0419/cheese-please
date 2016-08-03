@@ -13,4 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require materialize-sprockets
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
+
+var daHigh = function () {
+  $(this).addClass("highlight");
+}
+
+var daLow = function () {
+  $(this).removeClass("highlight");
+}
+
+var ready = function () {
+  $(".hlable").on('mouseenter', daHigh);
+  $(".hlable").on('mouseleave', daLow);
+}
+
+$(document).on("turbolinks:load ready", ready);
