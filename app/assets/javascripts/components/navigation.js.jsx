@@ -29,8 +29,8 @@ var Navigation = React.createClass({
           <div className="nav-wrapper">
             <a className="big" href="/">Mouse House</a>
             <ul id="nav-mobile" className="right">
-              <li><a href="/links/new">New Post</a></li>
-              <li><a href="/boards/new">New Board</a></li>
+              <li><a href="/cheeses/new">New Cheese</a></li>
+              <li><a href="/user_cheeses">Favs</a></li>
               {this.loggedIn()}
             </ul>
           </div>

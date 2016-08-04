@@ -1,0 +1,27 @@
+<div><h3><%= form_title %></h3></div>
+
+<div>
+  <% if user_cheese.errors.any? %>
+    <% user_cheese.errors.full_messages.each do |msg| %>
+      <p> <%= msg %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<div>
+  <%= form_for(user_cheese) do |f| %>
+    <div>
+      <label for="user_id">User: </label>
+      <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :email) %>
+    </div>
+
+    <div>
+      <label for="cheese_id">Cheese: </label>
+      <%= f.select :cheese_id, options_from_collection_for_select(Cheese.all, :id, :name) %>
+    </div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

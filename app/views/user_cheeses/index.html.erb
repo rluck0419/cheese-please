@@ -1,0 +1,4 @@
+<% user_cheeses.each do |user_cheese| %>
+  <div><%= "#{user_cheese.user.email}'s Favorite Cheeses:" %></div>
+  <div><%= user_cheese.cheese.name %></div>
+<% end %>
